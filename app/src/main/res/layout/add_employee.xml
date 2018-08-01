@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TableLayout
+        android:layout_marginTop="16sp"
+        android:layout_marginLeft="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+            <TextView
+                android:text="Employee Name:"
+                android:layout_width="120dp" />
+            <EditText
+                android:id="@+id/emp_name"
+                android:hint="Employee Name"
+                android:layout_width="180dp"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Date Of Birth"
+                android:layout_width="120dp"/>
+            <EditText
+                android:id="@+id/employee_date"
+                android:layout_width="180dp"
+                android:hint="Select Date"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Address:"
+                android:layout_width="120dp"/>
+
+            <EditText
+                android:id="@+id/emp_add"
+                android:layout_width="180dp"
+                android:hint="Address" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Salary"
+                android:layout_width="120dp"/>
+            <EditText
+                android:id="@+id/emp_salary"
+                android:layout_width="180dp"
+                android:inputType="numberDecimal"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Facilities"
+                android:layout_width="120dp"/>
+
+            <EditText
+                android:id="@+id/emp_facilities"
+                android:layout_width="180dp"/>
+
+        </TableRow>
+        <TableRow>
+            <TextView/>
+            <Button
+                android:onClick="insertEmployee"
+                android:text="ADD"
+                android:layout_width="wrap_content"/>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16sp">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="120dp"
+                android:text="Employee Name:" />
+
+            <EditText
+                android:id="@+id/emp_name"
+                android:layout_width="180dp"
+                android:hint="Employee Name"
+                android:inputType="textCapWords"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="120dp"
+                android:text="Address" />
+
+            <EditText
+                android:id="@+id/emp_address"
+                android:layout_width="180dp"
+                android:hint="Address"
+                android:inputType="textMultiLine" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="120dp"
+                android:text="Salary" />
+
+            <EditText
+                android:id="@+id/emp_salary1"
+                android:layout_width="180dp"
+                android:hint="Salary"
+                android:inputType="number"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="120dp"
+                android:text="Facilities:" />
+
+            <EditText
+                android:id="@+id/emp_facility"
+                android:layout_width="180dp"
+                android:hint="Traveling, Food"
+                android:inputType="textCapWords"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:onClick="UpdateEmployee"
+                android:text="Update" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

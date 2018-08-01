@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/storename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Store Name"
+            android:textSize="28sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/storename"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date:"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24/07/2017"
+                android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time:"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/Time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="14:20"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+        <EditText
+            android:id="@+id/Employee_Id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Employee Id" />
+
+        <TableLayout
+            android:id="@+id/table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Employee_Id">
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/Item_Id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Id"
+                    android:textSize="14sp"/>
+
+                <AutoCompleteTextView
+                    android:id="@+id/Item_name"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="Item Name"
+                    android:textSize="14sp"/>
+
+                <EditText
+                    android:id="@+id/Quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Quantity"
+                    android:textSize="14sp"/>
+
+                <EditText
+                    android:id="@+id/Item_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Rate"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/Amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Amount"
+                    android:textSize="14sp"/>
+            </TableRow>
+        </TableLayout>
+        <TextView
+            android:id="@+id/quantitytxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/table"
+            android:layout_marginTop="10dp"
+            android:text="Available Quantity = "
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/avl_Quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/quantitytxt"
+            android:layout_toRightOf="@id/quantitytxt"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

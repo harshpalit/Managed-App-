@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.palit.harsh.managed">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+        <activity android:name=".Login_Activity"/>
+        <activity android:name=".Additem_Activity"
+            android:label="Item">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.palit.harsh.managed.Home_Activity"/>
+        </activity>
+        <activity android:name=".DeleteItem_Activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.palit.harsh.managed.Home_Activity"/>
+        </activity>
+
+        <provider
+            android:name=".Data.DataProvider"
+            android:authorities="com.palit.harsh.managed"
+            android:exported="false"/>
+
+        <activity
+            android:name=".EditItem_Activity"
+            android:label="Edit Item">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.palit.harsh.managed.View_Activity"/>
+        </activity>
+        <activity
+            android:name=".Home_Activity"
+            android:label="@string/title_activity_home_"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".View_Activity"
+            android:label="View"
+            android:parentActivityName=".Home_Activity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.palit.harsh.managed.Home_Activity"/>
+        </activity>
+        <activity android:name=".AddEmployee">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.palit.harsh.managed.Additem_Activity"/>
+        </activity>
+        <activity
+            android:name=".NewTransaction"
+            android:label="New Transaction">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.palit.harsh.managed.Home_Activity"/>
+        </activity>
+        <activity android:name=".Transactions"/>
+        <activity
+            android:name=".AddSupplier"
+            android:label="Supplier">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.palit.harsh.managed.Additem_Activity"/>
+        </activity>
+
+        <activity android:name=".EditSupplier_Activity"
+            android:label="Edit Supplier">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.palit.harsh.managed.View_Activity"/>
+        </activity>
+        <activity
+            android:name=".WelcomeActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".NewUserRegistration"/>
+        <activity android:name=".EditEmployee_Activity"
+                      android:label="Edit Employee">
+                <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.palit.harsh.managed.View_Activity"/>
+            </activity>
+    </application>
+
+</manifest>

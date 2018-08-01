@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16sp">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="120dp"
+                android:text="Item Name:" />
+
+            <EditText
+                android:id="@+id/item_name"
+                android:layout_width="180dp"
+                android:hint="Enter Item Name" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="120dp"
+                android:text="Rate" />
+
+            <EditText
+                android:id="@+id/item_rate"
+                android:layout_width="180dp"
+                android:hint="Rs."
+                android:inputType="numberDecimal" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="120dp"
+                android:text="Item Description:" />
+
+            <EditText
+                android:id="@+id/item_desc"
+                android:layout_width="180dp"
+                android:hint="Desc Here" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="120dp"
+                android:text="Quantity:" />
+
+            <LinearLayout>
+
+                <Button
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:onClick="decrementno"
+                    android:text="-" />
+
+                <TextView
+                    android:id="@+id/quantity"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textSize="24dp" />
+
+                <Button
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:onClick="incrementno"
+                    android:text="+" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:onClick="UpdateItem"
+                android:text="Update" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TableLayout
+        android:layout_marginTop="16sp"
+        android:layout_marginLeft="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+            <TextView
+            android:text="Item Name:"
+            android:layout_width="120dp"/>
+            <EditText
+                android:id="@+id/item_name"
+                android:hint="Enter Item Name"
+                android:layout_width="180dp"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Rate"
+                android:layout_width="120dp"/>
+            <EditText
+                android:id="@+id/item_rate"
+                android:hint="Rs."
+                android:layout_width="180dp"
+                android:inputType="numberDecimal"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Item Description:"
+                android:layout_width="120dp"/>
+
+            <EditText
+                android:id="@+id/item_desc"
+                android:layout_width="180dp"
+                android:hint="Desc Here" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Supplier ID"
+                android:layout_width="120dp"/>
+            <EditText
+                android:id="@+id/item_supplier"
+                android:layout_width="180dp"
+                android:inputType="numberDecimal"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Quantity"
+                android:layout_width="120dp"/>
+            <LinearLayout>
+                <Button
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:text="-"
+                    android:onClick="decrementno"/>
+                <TextView
+                    android:id="@+id/quantity"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:textSize="24dp"
+                    android:text="0"
+                    android:textAlignment="center"/>
+                <Button
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:text="+"
+                    android:onClick="incrementno"/>
+            </LinearLayout>
+        </TableRow>
+        <TableRow>
+            <TextView/>
+            <Button
+                android:onClick="insertItem"
+                android:text="ADD"
+                android:layout_width="wrap_content"/>
+        </TableRow>
+    </TableLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/itemAddView"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/5224354917">
+
+    </com.google.android.gms.ads.AdView>
+
+</LinearLayout>
